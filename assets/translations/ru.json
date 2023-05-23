@@ -1,0 +1,45 @@
+{
+  "login": {
+    "header": "Enter your Local Market",
+    "button": "Войти",
+    "emailHint": "Email",
+    "passwordHint": "Пароль",
+    "noAccountText": "Не имеете аккаунта?",
+    "noAccountLink": "Регистрация",
+    "forgotPassword": "Забыли пароль?",
+    "enterValidEmail": "Введите действующий адрес",
+    "noEmptyPassword": "Пароль не может быть пустым",
+    "byEmailLink": "Войти по ссылке с email",
+    "byEmailAndPassword": "Войти с помощью email и пароля"
+  },
+  "signUp": {
+    "header": "Discover your Local Market",
+    "button": "Регистрация",
+    "emailHint": "Email",
+    "passwordHint": "Пароль",
+    "passwordDuplicateHint": "Повторите пароль",
+    "noAccountText": "Уже есть аккаунт?",
+    "noAccountLink": "Вход",
+    "enterValidEmail": "Введите действующий адрес",
+    "noEmptyPassword": "Пароль не должен быть пустым",
+    "longPassword": "Пароль должен быть больше 8 знаков",
+    "uppercasePassword": "Должен содержать заглавные буквы",
+    "lowercasePassword": "Должен содержать строчные буквы",
+    "specialPassword": "Должен содержать спецсимволы",
+    "matchPassword": "Пароли должны совпадать"
+  },
+  "forgotPassword": {
+    "sendEmail": "Отправить email",
+    "rememberPassword": "Вспомнили пароль?",
+    "header": "Remember your Local Market",
+    "emailHint": "Email",
+    "letterSent": "Письмо отправлено",
+    "enterValidEmail": "Введите действующий адрес",
+    "success": "Сообщение отправлено"
+  },
+  "verifyEmail": {
+    "text": "Подтвердите email, пожалуйста",
+    "resend": "Отправить снова",
+    "resendUnable": "Подождите, пожалуйста: "
+  }
+}

@@ -1,7 +1,11 @@
 import 'dart:async';
 
+import 'package:boxorders/blocs/auth/auth_bloc.dart';
+import 'package:boxorders/pages/auth/auth.dart';
+import 'package:boxorders/pages/verify_email/verify_email.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../main.dart';
@@ -21,6 +25,19 @@ final List<GoRoute> _routes = [
     builder: (context, state) => const MyHomePage(),
     redirect: (a, b) => '/brand/tender',
   ),
+  GoRoute(
+    path: '/auth',
+    builder: (context, state) => BlocProvider(
+      create: (context) => AuthBloc(),
+      child: AuthPage(),
+    ),
+    redirect: _authGuard,
+  ),
+  GoRoute(
+    path: '/verify_email',
+    builder: (context, state) => const VerifyEmailPage(),
+    redirect: _verifyEmailGuard,
+  ),
 ];
 
 FutureOr<String?> _guard(BuildContext context, GoRouterState state) {
@@ -30,6 +47,22 @@ FutureOr<String?> _guard(BuildContext context, GoRouterState state) {
     return '/auth';
   } else if (!user.emailVerified) {
     return '/verify_email';
+  }
+
+  return null;
+}
+
+FutureOr<String?> _authGuard(BuildContext context, GoRouterState state) {
+  if (FirebaseAuth.instance.currentUser != null) {
+    return '/';
+  }
+
+  return null;
+}
+
+FutureOr<String?> _verifyEmailGuard(BuildContext context, GoRouterState state) {
+  if (FirebaseAuth.instance.currentUser?.emailVerified == true) {
+    return '/';
   }
 
   return null;

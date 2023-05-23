@@ -1,3 +1,45 @@
 {
-  "hello": "hello world"
+  "login": {
+    "header": "Enter your Local Market",
+    "button": "Log in",
+    "emailHint": "Email",
+    "passwordHint": "Password",
+    "noAccountText": "Have no account?",
+    "noAccountLink": "Sign Up",
+    "forgotPassword": "Forgot password?",
+    "enterValidEmail": "Enter valid email",
+    "noEmptyPassword": "Password can not be empty",
+    "byEmailLink": "Log in by email link",
+    "byEmailAndPassword": "Log in by email and password"
+  },
+  "signUp": {
+    "header": "Discover your Local Market",
+    "button": "Sign Up",
+    "emailHint": "Email",
+    "passwordHint": "Password",
+    "passwordDuplicateHint": "Repeat password",
+    "noAccountText": "Already have an account?",
+    "noAccountLink": "Log In",
+    "enterValidEmail": "Enter valid email",
+    "noEmptyPassword": "Password should not be empty",
+    "longPassword": "Should be at least 8 symbols long",
+    "uppercasePassword": "Should contain uppercase letters",
+    "lowercasePassword": "Should contain lowercase letters",
+    "specialPassword": "Should contain special characters",
+    "matchPassword": "Passwords should match"
+  },
+  "forgotPassword": {
+    "sendEmail": "Send email",
+    "rememberPassword": "Remember password?",
+    "header": "Remember your Local Market",
+    "emailHint": "Email",
+    "letterSent": "Reset letter sent",
+    "enterValidEmail": "Enter valid email",
+    "success": "Message sent"
+  },
+  "verifyEmail": {
+    "text": "Verify your email please",
+    "resend": "Resend",
+    "resendUnable": "Please wait: "
+  }
 }
