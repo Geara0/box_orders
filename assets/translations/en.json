@@ -41,5 +41,10 @@
     "text": "Verify your email please",
     "resend": "Resend",
     "resendUnable": "Please wait: "
+  },
+  "settings": {
+    "user": "I am customer",
+    "seller": "I am seller",
+    "title": "Settings"
   }
 }
