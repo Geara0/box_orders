@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:boxorders/blocs/auth/auth_bloc.dart';
 import 'package:boxorders/blocs/settings/settings_bloc.dart';
 import 'package:boxorders/pages/auth/auth.dart';
+import 'package:boxorders/pages/create_box/create_box.dart';
+import 'package:boxorders/pages/main/main_page.dart';
 import 'package:boxorders/pages/settings/settings_page.dart';
 import 'package:boxorders/pages/verify_email/verify_email.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,11 +12,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../main.dart';
-
 final GoRouter router = GoRouter(
   errorBuilder: (context, state) {
-    return const MyHomePage();
+    return const MainPage();
   },
   redirect: _guard,
   routes: _routes,
@@ -24,7 +24,17 @@ final GoRouter router = GoRouter(
 final List<GoRoute> _routes = [
   GoRoute(
     path: '/',
-    builder: (context, state) => const MyHomePage(),
+    builder: (context, state) => const MainPage(),
+  ),
+  GoRoute(
+    path: '/box',
+    redirect: _boxGuard,
+    routes: [
+      GoRoute(
+        path: 'create',
+        builder: (context, state) => CreateBoxPage(),
+      ),
+    ],
   ),
   GoRoute(
     path: '/settings',
@@ -70,6 +80,14 @@ FutureOr<String?> _authGuard(BuildContext context, GoRouterState state) {
 
 FutureOr<String?> _verifyEmailGuard(BuildContext context, GoRouterState state) {
   if (FirebaseAuth.instance.currentUser?.emailVerified == true) {
+    return '/';
+  }
+
+  return null;
+}
+
+FutureOr<String?> _boxGuard(BuildContext context, GoRouterState state) {
+  if (state.fullPath == '/box') {
     return '/';
   }
 
