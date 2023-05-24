@@ -4,13 +4,14 @@ import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:meta/meta.dart';
+
 part 'settings_event.dart';
 
 part 'settings_state.dart';
 
 class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
   final ref = FirebaseDatabase.instance
-      .ref('${FirebaseAuth.instance.currentUser?.uid}/params/isSeller');
+      .ref('users/${FirebaseAuth.instance.currentUser?.uid}/params/isSeller');
 
   SettingsBloc() : super(SettingsInitial()) {
     on<SetCurrentAccountStateEvent>(_setCurrentAccountStateEvent);
