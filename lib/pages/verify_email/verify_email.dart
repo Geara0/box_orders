@@ -11,6 +11,7 @@ import 'package:go_router/go_router.dart';
 class VerifyEmailPage extends StatefulWidget {
   const VerifyEmailPage({Key? key}) : super(key: key);
   static const duration = Duration(seconds: 60);
+  static const checkupDuration = Duration(seconds: 1);
   static const durationInt = 60;
 
   @override
@@ -40,7 +41,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage>
     isEmailVerified = FirebaseAuth.instance.currentUser?.emailVerified ?? false;
 
     timer = Timer.periodic(
-      VerifyEmailPage.duration,
+      VerifyEmailPage.checkupDuration,
       (_) => checkVerificationEmail(),
     );
 
@@ -137,7 +138,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage>
           });
       MessageUtils.showTertiarySnackBar('${e.message}', context);
     } catch (e) {
-      if (!e.toString().endsWith('(auth/too-many-requests).')) {
+      if (!e.toString().contains('too-many-requests')) {
         debugPrint('$e');
         FirebaseAnalytics.instance.logEvent(
             name: 'verifyEmailException',
