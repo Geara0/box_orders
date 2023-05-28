@@ -1,4 +1,7 @@
 {
+  "globals": {
+    "currency": "CU"
+  },
   "login": {
     "header": "Enter your Local Market",
     "button": "Log in",
@@ -46,5 +49,17 @@
     "user": "I am customer",
     "seller": "I am seller",
     "title": "Settings"
+  },
+  "createBox": {
+    "header": "Create your own box",
+    "emptyNameError": "Name must not be empty",
+    "emptyPriceError": "Price must not be empty",
+    "nameLabel": "Name",
+    "descriptionLabel": "Description",
+    "priceLabel": "Price",
+    "pasteButton": "Publish"
+  },
+  "post": {
+    "showMore": "Show more"
   }
 }

@@ -1,4 +1,7 @@
 {
+  "globals": {
+    "currency": "УЕ"
+  },
   "login": {
     "header": "Enter your Local Market",
     "button": "Войти",
@@ -46,5 +49,17 @@
     "user": "Я покупатель",
     "seller": "Я продавец",
     "title": "Настройки"
+  },
+  "createBox": {
+    "header": "Создайте свою коробку",
+    "emptyNameError": "Название должно быть заполнено",
+    "emptyPriceError": "Цена должна быть заполнена",
+    "nameLabel": "Название",
+    "descriptionLabel": "Описание",
+    "priceLabel": "Цена",
+    "pasteButton": "Опубликовать"
+  },
+  "post": {
+    "showMore": "Показать ещё"
   }
 }

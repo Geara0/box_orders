@@ -24,7 +24,6 @@ class SettingsPage extends StatelessWidget {
   }
 
   Widget _builder(BuildContext context, SettingsState state) {
-    debugPrint('trigger builder');
     if (state is SettingsInitial) {
       return const CircularProgressIndicator();
     }
@@ -44,7 +43,6 @@ class SettingsPage extends StatelessWidget {
         Switch(
           value: state.isSeller,
           onChanged: (bool val) {
-            debugPrint('onChanged: $val');
             context
                 .read<SettingsBloc>()
                 .add(SetCurrentAccountStateEvent(isSeller: val));

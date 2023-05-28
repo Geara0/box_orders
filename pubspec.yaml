@@ -37,6 +37,7 @@ dependencies:
   google_sign_in: ^6.1.1
   meta: ^1.9.1
   image_picker: ^0.8.7+5
+  flutter_animate: ^4.1.1+1
 
 dev_dependencies:
   flutter_test:
@@ -48,4 +49,5 @@ flutter:
   generate: true
   assets:
     - assets/translations/
+    - assets/images/
   uses-material-design: true
