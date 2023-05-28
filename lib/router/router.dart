@@ -4,8 +4,9 @@ import 'package:boxorders/blocs/auth/auth_bloc.dart';
 import 'package:boxorders/blocs/settings/settings_bloc.dart';
 import 'package:boxorders/pages/auth/auth.dart';
 import 'package:boxorders/pages/create_box/create_box.dart';
-import 'package:boxorders/pages/main/main_page.dart';
+import 'package:boxorders/pages/main/main.dart';
 import 'package:boxorders/pages/settings/settings_page.dart';
+import 'package:boxorders/pages/subscriptions/subscriptions.dart';
 import 'package:boxorders/pages/verify_email/verify_email.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -32,9 +33,13 @@ final List<GoRoute> _routes = [
     routes: [
       GoRoute(
         path: 'create',
-        builder: (context, state) => CreateBoxPage(),
+        builder: (context, state) => const CreateBoxPage(),
       ),
     ],
+  ),
+  GoRoute(
+    path: '/shopping_bag',
+    builder: (context, state) => const SubscriptionsPage(),
   ),
   GoRoute(
     path: '/settings',

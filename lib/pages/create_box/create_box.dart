@@ -66,7 +66,7 @@ class _CreateBoxPageState extends State<CreateBoxPage> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: colorScheme.primaryContainer,
+        backgroundColor: colorScheme.inversePrimary,
         title: Text('createBox.header'.tr()),
       ),
       body: Stack(

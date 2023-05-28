@@ -60,6 +60,13 @@
     "pasteButton": "Publish"
   },
   "post": {
-    "showMore": "Show more"
+    "showMore": "Show more",
+    "unsubscribe": "Unsubscribe"
+  },
+  "main": {
+    "header": "Select box to subscribe"
+  },
+  "subscriptions": {
+    "header": "Your subscriptions"
   }
 }

@@ -60,6 +60,13 @@
     "pasteButton": "Опубликовать"
   },
   "post": {
-    "showMore": "Показать ещё"
+    "showMore": "Показать ещё",
+    "unsubscribe": "Отписаться"
+  },
+  "main": {
+    "header": "Подпишитесь на что-нибудь"
+  },
+  "subscriptions": {
+    "header": "Ваши подписки"
   }
 }

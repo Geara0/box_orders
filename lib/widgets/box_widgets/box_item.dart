@@ -5,9 +5,11 @@ import 'package:flutter_animate/flutter_animate.dart';
 
 class BoxItem extends StatefulWidget {
   final BoxDto child;
+  final void Function() callback;
 
   const BoxItem({
     required this.child,
+    required this.callback,
     Key? key,
   }) : super(key: key);
 
@@ -102,9 +104,11 @@ class _BoxItemState extends State<BoxItem> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       FilledButton.tonal(
-                          onPressed: () {},
-                          child: Text(
-                              '${widget.child.price} ${'globals.currency'.tr()}')),
+                        onPressed: widget.callback,
+                        child: Text(
+                          '${widget.child.price} ${'globals.currency'.tr()}',
+                        ),
+                      ),
                       if (hasOverflow)
                         TextButton(
                           onPressed: toggleExpand,
